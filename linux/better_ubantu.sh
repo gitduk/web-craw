@@ -43,6 +43,20 @@ echo "        source $AUTOJUMP_PATH" >> ~/.config/fish/config.fish
 echo "    end" >> ~/.config/fish/config.fish
 echo "end" >> ~/.config/fish/config.fish
 
+echo "安装pip3"
+sudo apt-get install pip3
+sudo apt-get install python3-pip
+
+echo "优化pip下载速度"
+mkdir ~/.pip
+cd ~/.pip
+touch pip.config
+echo "[global]" >> pip.config
+echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> pip.config
+echo "[install]" >> pip.config
+echo "trusted-host=mirrors.aliyun.com" >> pip.config
+
+
 
 
 
