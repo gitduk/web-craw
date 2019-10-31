@@ -1,0 +1,7 @@
+#!/bin/bash
+
+javac ../../java/IBHS.java
+cd ../../java
+java IBHS > ~/HS
+java IBHS > hs.txt
+cat ~/HS
