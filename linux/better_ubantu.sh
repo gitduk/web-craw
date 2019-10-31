@@ -22,3 +22,29 @@ sudo apt-get install  gnome-shell-extension-dashtodock
 echo "安装omf和主题"
 curl -L https://get.oh-my.fish | fish
 omf install nelsonjchen
+
+echo "安装fzf"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+echo "fzf预览设置"
+export FZF_DEFAULT_OPTS="--height 40% | head -500'"
+
+
+echo "安装tmux"
+sudo apt install tmux
+
+echo "安装autojump，并配置"
+git clone https://github.com/wting/autojump.git
+echo "begin" >> ~/.config/fish/config.fish
+echo "    set --local AUTOJUMP_PATH $HOME/.autojump/share/autojump/autojump.fish" >> ~/.config/fish/config.fish
+echo "    if test -e $AUTOJUMP_PATH" >> ~/.config/fish/config.fish
+echo "        source $AUTOJUMP_PATH" >> ~/.config/fish/config.fish
+echo "    end" >> ~/.config/fish/config.fish
+echo "end" >> ~/.config/fish/config.fish
+
+
+
+
+
+
