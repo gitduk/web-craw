@@ -23,8 +23,8 @@ public class IBHS
         // dongkai`s IBHS
         System.out.println("===================================");
 
-        int[] dates = {22, 23, 24, 25, 26, 27, 28};
-        int[] list = {1, 2, 3, 4, 5, 6, 7};
+        int[] dates = {22, 23, 24, 25, 26, 27, 28,30};
+        int[] list = {1, 2, 3, 4, 5, 6, 7, 8};
         int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         for(int i=0; i<list.length; i++){
             int result = current_date - dates[i];
