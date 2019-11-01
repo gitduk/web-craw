@@ -8,7 +8,7 @@ echo "下载maven..."
 sudo  wget https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
 
 echo "配置环境变量..."
-echo -e "export M2_HOME=/usr/maven/apache-maven-3.6.1\nexport CLASSPATH=\$CLASSPATH:\$M2_HOME/lib\nexport PATH=\$PATH:\$M2_HOME/bin" >>  ~/HS
+echo -e "export M2_HOME=/usr/maven/apache-maven-3.6.1\nexport CLASSPATH=\$CLASSPATH:\$M2_HOME/lib\nexport PATH=\$PATH:\$M2_HOME/bin" >>  ~/.bashrc
 
 source ~/.bashrc
 
