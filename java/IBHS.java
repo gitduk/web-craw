@@ -23,12 +23,12 @@ public class IBHS
         // dongkai`s IBHS
         System.out.println("===================================");
 
-        int[] dates = {22, 23, 24, 25, 26, 27, 28, 30};
-        int[] list = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] dates = {22, 23, 24, 25, 26, 27, 28, 30, 1};
+        int[] list = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int[] months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         for(int i=0; i<list.length; i++){
             int result = current_date - dates[i];
-            if (result > 0) {
+            if (result >= 0) {
         	for(int j=0; j<levels.length; j++) {
         	    if (result == levels[j]) {
         		System.out.println("review lists are:"+list[i]+" ("+dates[i]+")");
@@ -36,7 +36,7 @@ public class IBHS
         	}
             }
            else {
-               result = months[current_month] - dates[i] + current_date;
+               result = months[current_month-1] - dates[i] + current_date;
                for(int j=0; j<levels.length; j++) {
                    if (result == levels[j]) {
         		System.out.println("review lists are:"+list[i]+" ("+dates[i]+")");
@@ -52,7 +52,7 @@ public class IBHS
 
         for(int i=0; i<list1.length; i++){
             int result = current_date - dates1[i];
-            if (result > 0) {
+            if (result >= 0) {
         	for(int j=0; j<levels.length; j++) {
         	    if (result == levels[j]) {
         		System.out.println("review lists are:"+list1[i]+" ("+dates1[i]+")");
@@ -60,7 +60,7 @@ public class IBHS
         	}
             }
            else {
-               result = months[current_month] - dates1[i] + current_date;
+               result = months[current_month-1] - dates1[i] + current_date;
                for(int j=0; j<levels.length; j++) {
                    if (result == levels[j]) {
         		System.out.println("review lists are:"+list1[i]+" ("+dates1[i]+")");
