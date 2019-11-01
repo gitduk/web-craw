@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chsh -s /bin/bash
+sudo pkill  Xorg

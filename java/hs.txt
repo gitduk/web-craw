@@ -1,16 +1,8 @@
-today is:2019-11-01 09:33:05
+today is:2019-11-01 05:33:03
 
 ===================================
-9
-8
-7
 review lists are:3 (24)
-6
-5
-4
-3
 review lists are:7 (28)
-1
 review lists are:8 (30)
 review lists are:9 (1)
 ===================================

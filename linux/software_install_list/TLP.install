@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "1,用TLP降低发热"
+sudo add-apt-repository ppa:linrunner/tlp
+sudo apt update
+sudo apt install tlp tlp-rdw
+sudo tlp start

@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "3,安装 Preload 预加载程序"
+sudo apt install preload

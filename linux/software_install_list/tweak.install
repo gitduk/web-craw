@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "安装美化相关工具"
+sudo apt-get install gnome-tweak-tool
+sudo apt-get install gnome-shell-extensions
+sudo apt-get install  gnome-shell-extension-dashtodock
