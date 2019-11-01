@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "备份~/bin到远程仓库..."
+sudo cp ~/bin/* ~/GitHub/mycode/linux/mybin/
+cd ~/GitHub/mycode/linux/mybin/
+push
