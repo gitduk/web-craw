@@ -56,7 +56,9 @@ echo "index-url = https://pypi.tuna.tsinghua.edu.cn/simple" >> pip.config
 echo "[install]" >> pip.config
 echo "trusted-host=mirrors.aliyun.com" >> pip.config
 
-
+echo "安装java13"
+sudo add-apt-repository ppa:linuxuprising/java
+sudo apt-get install oracle-java13-installer
 
 
 
