@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "开始备份tmux配置..."
+sudo cp ~/.tmux.conf ./tmux.config
+
+echo "开始备份bash配置..."
+sudo cp ~/.profile ./profile
+sudo cp ~/.bashrc ./bashrc
+
+echo "开始备份fish配置..."
+sudo cp ~/.config/fish/config.fish .

@@ -1,5 +1,13 @@
 #!/bin/bash
 
-sudo mkdir ~/.bin
+if [ -e "~/.bin" ]; then
+    sudo mkdir ~/.bin
+fi
+
+FISH_PATH="/home/dongkai/.config/fish/config.fish"
+
+echo "$PATH:/home/dongkai/.bin" >> $FISH_PATH
+source $FISH_PATH
+
 sudo cp * ~/.bin
 
