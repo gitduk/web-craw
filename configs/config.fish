@@ -17,7 +17,9 @@ abbr -a ac aria2c
 abbr -a bas bash -c 
 abbr -a mv sudo mv
 abbr -a q exit
-abbr -a sou source
+abbr -a sfish source ~/.config/fish/config.fish
+abbr -a gt gedit
+abbr -a wis whereis
 
 begin
     set --local AUTOJUMP_PATH $HOME/.autojump/share/autojump/autojump.fish

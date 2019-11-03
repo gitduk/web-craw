@@ -1,11 +1,29 @@
 #!/bin/bash
 
-echo "开始备份tmux配置..."
-sudo cp ~/.tmux.conf ./tmux.config
 
-echo "开始备份bash配置..."
-sudo cp ~/.profile ./profile
-sudo cp ~/.bashrc ./bashrc
+if [ -e "$HOME/.tmux.conf" ]; then
+    echo "1,开始备份\"~/.tmux.conf\""
+    sudo cp ~/.tmux.conf ./
+fi
 
-echo "开始备份fish配置..."
-sudo cp ~/.config/fish/config.fish .
+if [ -e "$HOME/.profile" ]; then
+    echo "2,开始备份\"~/.profile\""
+    sudo cp ~/.profile ./
+fi
+
+if [ -e "$HOME/.bashrc" ]; then
+    echo "3,开始备份\"~/.bashrc\""
+    sudo cp ~/.bashrc ./
+fi
+
+
+if [ -e "$HOME/.config/fish/config.fish" ]; then
+    echo "4,开始备份\"~/.config/fish/config.fishfish\""
+    sudo cp ~/.config/fish/config.fish ./
+fi
+
+if [ -e "/etc/apache2/apache2.conf" ]; then
+    echo "5,开始备份\"/etc/apache2/apache2.conf\""
+    sudo cp /etc/apache2/apache2.conf ./
+fi
+

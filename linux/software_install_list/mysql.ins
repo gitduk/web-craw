@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo "安装 mysql..."
+
+update
+
+sudo apt-get install mysql-server
+
+echo "初始化配置..."
+echo "建议: N key N Y N Y"
+
+sudo mysql_secure_installation
+
+echo "检查mysql服务状态..."
+
+echo "在Ubuntu下MySQL缺省是只允许本地访问的，使用workbench连接工具是连不上的；
+如果你要其他机器也能够访问的话，需要进行配置；"
+
+echo "root 登录..."
+echo "登陆后请输入：GRANT ALL PRIVILEGES ON *.* TO root@localhost IDENTIFIED BY \"123456\";"
+
+
+sudo mysql -u root -p 
+
+
+# 其中root@localhos，localhost就是本地访问，配置成%就是所有主机都可连接；
+
+第二个'123456'为你给新增权限用户设置的密码，%代表所有主机，也可以是具体的ip；
+不过这随设置了%但我root通过工具还是登陆不进去，可能是为了安全性，所以新建数据库和用户；
+
+
+
+
+
+
