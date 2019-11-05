@@ -264,6 +264,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scribble
 map <leader>q :wq<cr>
+imap <leader>q <esc>:wq<cr>
 
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>
@@ -417,6 +418,17 @@ func! Run()
 	:below 10spl
 	:ter python %
 endfunc
+
+" ================================
+" => run java
+" ================================
+" run java
+map <F5> :call Run()<cr>
+func! Run()
+	:below 10spl
+	:ter javac %
+endfunc
+
 
 " ================================
 " => add file messages

@@ -7,7 +7,7 @@ abbr -a jc javac
 abbr -a jv java
 abbr -a rf sudo rm -rf
 abbr -a update sudo apt-fast update
-abbr -a updgrade sudo apt-fast upgrade
+abbr -a upgrade sudo apt-fast upgrade
 abbr -a install sudo apt-fast install
 abbr -a ff fzf
 abbr -a tm tmux
@@ -20,6 +20,7 @@ abbr -a q exit
 abbr -a sfish source ~/.config/fish/config.fish
 abbr -a gt gedit
 abbr -a wis whereis
+abbr -a so source
 
 begin
     set --local AUTOJUMP_PATH $HOME/.autojump/share/autojump/autojump.fish
@@ -27,5 +28,10 @@ begin
         source $AUTOJUMP_PATH
     end
 end
+
+wmctrl -r :ACTIVE: -b add,fullscreen
+wmctrl -r :ACTIVE: -b add,below
+wmctrl -r :ACTIVE: -b add,skip_taskbar
+
 
 
