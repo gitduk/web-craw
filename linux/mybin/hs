@@ -1,7 +1,0 @@
-#!/bin/bash
-
-cd ~/GitHub/mycode/java
-javac IBHS.java
-java IBHS > ~/HS
-java IBHS > hs.txt
-cat ~/HS
