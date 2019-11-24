@@ -9,7 +9,7 @@
 2，可自选爬取壁纸的种类，页数(线程)
 
 爬取页面展示：
-![1](https://github.com/gitduk/mycode/screenshots/show.png)
+![1](https://github.com/gitduk/mycode/blob/master/screenshots/show.png)
 
 爬取结果展示：
-![2](https://github.com/gitduk/mycode/screenshots/show1.png)
+![2](https://github.com/gitduk/mycode/blob/master/screenshots/show1.png)
