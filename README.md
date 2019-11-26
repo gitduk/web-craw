@@ -8,6 +8,7 @@
 
 2，可自选爬取壁纸的种类，页数(线程)
 
+<<<<<<< HEAD
 说明：
 URL中的[type]字段为爬取壁纸的种类，具体可为：
 【
@@ -45,7 +46,10 @@ URL中的[type]字段为爬取壁纸的种类，具体可为：
 
 
 爬取页面展示：
+=======
+爬取页面展示:
+>>>>>>> ef549ec3f047dee23c5ac5f1a71a212fcfc8ec0c
 ![1](https://github.com/gitduk/mycode/blob/master/screenshots/show.png)
 
-爬取结果展示：
+爬取结果展示:
 ![2](https://github.com/gitduk/mycode/blob/master/screenshots/show1.png)
