@@ -1,5 +1,5 @@
-# mycode
 
+<<<<<<< HEAD
 ## getwallpaper.py
 
 特点：
@@ -53,3 +53,5 @@ URL中的[type]字段为爬取壁纸的种类，具体可为：
 
 爬取结果展示:
 ![2](https://github.com/gitduk/mycode/blob/master/screenshots/show1.png)
+=======
+>>>>>>> 99d3ecb12b1355fff865596f54e44ec38476ae00
