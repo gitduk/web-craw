@@ -47,9 +47,10 @@ URL中的[type]字段为爬取壁纸的种类，具体可为：
 
 爬取页面展示：
 
-输入分类
+输入分类、下载页数
 ![1](https://github.com/gitduk/mycode/blob/master/screenshots/show1.png)
-输入下载页数
+
+开始下载
 ![2](https://github.com/gitduk/mycode/blob/master/screenshots/show2.png)
 
 爬取结果展示:
