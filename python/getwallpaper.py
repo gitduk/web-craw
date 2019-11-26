@@ -6,9 +6,9 @@ import time
 from threading import Thread
 
 
-# n = input('请输入下载页数：' + '\n')
-def wallpaper_download(n, p):
-    html = requests.get('http://desk.zol.com.cn/pc/good_%d.html' % n)
+
+def wallpaper_download(t, n, p):
+    html = requests.get('http://desk.zol.com.cn/%s/good_%d.html' % (t, n))
     html.encoding = 'gb2312'
     data = html.text
     # print(data)
@@ -98,13 +98,15 @@ def wallpaper_download(n, p):
 
 # 多线程下载
 class MyProcess(Thread):
-    def __init__(self, page, n):
+    def __init__(self, type, page, n):
         super().__init__()
         self.page = page
         self.n = n
+        self.type = type
 
     def run(self):
-        wallpaper_download(self.page, self.n)
+        wallpaper_download(self.type, self.page, self.n)
+
 
 
 if __name__ == '__main__':
@@ -113,9 +115,36 @@ if __name__ == '__main__':
 
     p_list = []
     t = 0
+    print("""可选类型：
+    fengjing,
+    dongman,
+    meinv,
+    chuangyi,
+    katong,
+    qiche,
+    youxi,
+    keai,
+    mingxing,
+    jianzhu,
+    zhiwu,
+    dongwu,
+    jingwu,
+    yingshi,
+    chemo,
+    tiyu,
+    model,
+    shouchaobao,
+    meishi,
+    xingzuo,
+    jieri,
+    pinpai,
+    beijing,
+    qita
+    """)
+    type = input('请输入下载壁纸类型：\n')
     page_num = input('请输入下载页数：\n')
     for i in range(int(page_num)):
-        p = MyProcess(i, t)
+        p = MyProcess(type, i, t)
         p_list.append(p)
         t += 1
 
