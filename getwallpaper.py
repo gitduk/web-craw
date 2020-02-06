@@ -5,13 +5,17 @@ import os
 import time
 from threading import Thread
 
+def get_html(url, n):
+    html = requests.get(url % (t, n))
+    html.encoding = 'gb2312'
+    data = html.text
+    return data
+
 
 
 def wallpaper_download(t, n, p):
-    html = requests.get('http://desk.zol.com.cn/%s/good_%d.html' % (t, n))
-    html.encoding = 'gb2312'
-    data = html.text
-    # print(data)
+    url = 'http://desk.zol.com.cn/%s/good_%d.html'    # print(data)
+    data = get_html(url, n)
     # 获取页面壁纸集的链接地址，数量和名字
     url = re.findall('<a class="pic" href="(.*?)"', data)
     img_amount = re.findall('</em> \(\d+?张\)</span>', data)
