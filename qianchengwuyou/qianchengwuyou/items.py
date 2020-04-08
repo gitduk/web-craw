@@ -8,9 +8,11 @@
 import scrapy
 
 
-class DoubanItem(scrapy.Item):
+class QianchengwuyouItem(scrapy.Item):
     # define the fields for your item here like:
-    rank = scrapy.Field()
-    title = scrapy.Field()
+    company_name = scrapy.Field()
+    position = scrapy.Field()
+    location = scrapy.Field()
     link = scrapy.Field()
-    rating = scrapy.Field()
+    money = scrapy.Field()
+    date = scrapy.Field()
