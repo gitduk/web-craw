@@ -50,3 +50,4 @@ w3lib
 wheel
 zope.interface
 selenium
+demjson

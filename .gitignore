@@ -1,3 +1,5 @@
 *.class
 venv/
 wallpaper/
+*/images/
+*/movies/
