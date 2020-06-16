@@ -50,7 +50,7 @@ def save_img(page, img_list):
 try:
     pool = ThreadPool(5, info=False)
     pool.add_task_list(get_img, [('Index', i) for i in range(10, 21)])
-    pool.run()
+    pool.start()
 except:
     logger.error()
 finally:
