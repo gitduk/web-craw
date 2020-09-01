@@ -18,7 +18,7 @@ def get_review_num(url):
     return num_str
 
 
-def get_review_data(id, conn, url):
+def get_review_data(asin, conn, url):
     resp = requests.get(url=url, headers=header, cookies=cookie, timeout=5)
     time.sleep(0.1)
     soup = BeautifulSoup(resp.text, 'html.parser')
@@ -26,18 +26,31 @@ def get_review_data(id, conn, url):
 
     for review in reviews:
         lg.info("===================================================")
-        cuns_name = review.find("span", class_="a-profile-name").text
+        review_id = review.get("id")
+        cons_id = review.find("a", class_="a-profile").get("href").split("account.")[1].split("/")[0]
+        cons_name = review.find("span", class_="a-profile-name").text
         star = float(review.find("span", class_="a-icon-alt").text.split(" ")[0])
         date = review.find("span", class_="a-size-base a-color-secondary review-date").text
         txt = review.find("span", class_="a-size-base review-text review-text-content").span.text
 
-        values = (id, cuns_name, star, date, txt)
+        values = (review_id, cons_id, cons_name, asin, star, date, txt)
         cur = conn.cursor()
 
         lock.acquire()
-        cur.execute("INSERT INTO Reviews (commodity_id, consumer, star, date, review) VALUES (?, ?, ?, ?, ?)", values)
-        lg.info("ID :{}".format(id))
-        lg.info("Cus Name:{}".format(cuns_name))
+        try:
+            # if not cur.execute("SELECT review_id FROM Reviews WHERE review_id == ?", (review_id,)):
+            #     lg.warning("INSERT")
+            cur.execute(
+            "INSERT INTO Reviews (review_id, consumer_id, consumer_name, asin, star, date, review) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            values)
+            conn.commit()
+        except:
+            lg.error("Repeat insert")
+
+        lg.info("ReviewID :{}".format(review_id))
+        lg.info("Cus ID:{}".format(cons_id))
+        lg.info("Cus Name:{}".format(cons_name))
+        lg.info("ASIN :{}".format(asin))
         lg.info("Star:{}".format(star))
         lg.info("Date:{}".format(date))
         lg.info("Txt:{}".format(txt))

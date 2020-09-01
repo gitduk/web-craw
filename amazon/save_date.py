@@ -6,7 +6,7 @@ conn.isolation_level = None
 
 cur = conn.cursor()
 cur.execute('''CREATE TABLE  IF NOT EXISTS TopSellers (
-       ID       CHAR(20) PRIMARY KEY NOT NULL,
+       ASIN     CHAR(20) PRIMARY KEY NOT NULL,
        TITLE    CHAR(255) NOT NULL,
        PRICE    REAL NOT NULL,
        STARS    REAL NOT NULL,
@@ -15,9 +15,10 @@ cur.execute('''CREATE TABLE  IF NOT EXISTS TopSellers (
        ''')
 
 cur.execute('''CREATE TABLE IF NOT EXISTS Reviews (
-       id            INTEGER PRIMARY KEY AUTOINCREMENT,
-       commodity_id  CHAR(20) NOT NULL,
-       consumer      CHAR(20) NOT NULL,
+       review_id     CHAR(20) PRIMARY KEY NOT NULL,
+       consumer_id   CHAR(20) NOT NULL,
+       consumer_name CHAR(20) NOT NULL,
+       asin          CHAR(20) NOT NULL,
        star          REAL NOT NULL,
        date          CHAR(20) NOT NULL,
        review        TEXT NOT NULL
