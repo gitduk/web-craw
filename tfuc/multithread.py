@@ -49,6 +49,7 @@ class ThreadPool(object):
 
     def wait_work_done(self):
         for i in self.waiting_list:
+            time.sleep(0.5)
             i.start()
             self.waiting_list.remove(i)
             self.working_list.append(i)

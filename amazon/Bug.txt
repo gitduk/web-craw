@@ -1,0 +1,27 @@
+
+2020/09/02
+
+Price : Currently unavailable. [B0009ONZ8G] (ok)
+Price : 21.08 - 47.53 [ B0007ZF4OA] (ok)
+Price : Only 1 left in stock - order soon. [B000GB0G7A] (ok)
+Price : 8.20\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7.77 [B000GCIAYK] [B004Y3C9B2] [B005CVGJFM] [B005PLQIQ4] [B007DGRT3K]  (ok)
+txt   : txt = review.find("span", class_="a-size-base review-text review-text-content").span.text
+        AttributeError: 'NoneType' object has no attribute 'text' [B000J07E7I] (ok)
+
+503 add proxy to get (ok);
+
+B00002NDRQ No price (ok?)
+
+read time out  (ok)
+
+image code (x)
+
+
+
+2020/09/02
+
+image code (ok)
+sqlite save error (ok)
+ReadTimeOut (ok)
+SOCKSHTTPSConnectionPool (ok)
+MaxRetryError(ok)
