@@ -54,16 +54,14 @@ def amazon_request(url):
         return None
 
 
-
 def amazon_craw(ASIN):
     url = "https://www.amazon.com/dp/{}/".format(
         ASIN)
     lg.info(url)
 
-    result = amazon_request(url)
-    if result:
+    try:
         resp, soup = amazon_request(url)
-    else:
+    except TypeError:
         return
 
     try:
